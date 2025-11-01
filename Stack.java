@@ -1,17 +1,31 @@
-class Stack<T> {
-    T value;
+class Stack:
+    def __init__(self):
+        self.stack = []
 
-    void push(T value) {
-    
-  
+    def push(self, value):
+        self.stack.append(value)
 
-public class Main {
-    public static void main(String[] args) {
-        Stack<T> myStack = new Stack<>();
-        myStack.push(2);
-    
-    
-  
+    def pop(self):
+        try:
+            if self.stack == []:
+                return
+            else:
+                temp = []
+                for i in range(len(self.stack)-1):
+                    temp.append(self.stack[i])
+                self.stack = temp
+        except:
+            pass
+            
+    def __str__(self):
+        return str(self.stack)
 
-  
-  
+
+myStack = Stack()
+myStack.pop()
+myStack.push(1)
+myStack.push(2)
+myStack.push("3")
+myStack.push("4")
+myStack.pop()
+print(myStack)
