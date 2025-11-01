@@ -16,7 +16,7 @@ class Stack:
                 self.stack = temp
         except:
             pass
-            
+
     def __str__(self):
         return str(self.stack)
 
