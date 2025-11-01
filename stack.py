@@ -2,12 +2,12 @@ class Stack:
     def __init__(self):
         self.stack = []
 
-    def push(self, value):
+    def push(self, value: any):
         self.stack.append(value)
 
     def pop(self):
         try:
-            if self.stack == []:
+            if len(self.stack) < 1:
                 return
             else:
                 temp = []
@@ -16,7 +16,7 @@ class Stack:
                 self.stack = temp
         except:
             pass
-
+            
     def __str__(self):
         return str(self.stack)
 
